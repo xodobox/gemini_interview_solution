@@ -41,7 +41,6 @@ int main()
       std::cout << std::endl;
   };
 
-#if 1
   bool dump_orders_pending = false;
   while(getline(std::cin, line) && line != "exit")
   {
@@ -60,21 +59,5 @@ int main()
           dump_orders_pending = false;
       }
   }
-
-#else
-
-  while (getline(std::cin, line) && line != "exit")
-  {
-      std::istringstream stream{line};
-      Order order;
-      stream >> order.order_id >> order.side >> order.instrument >> order.quantity >> order.price;
-
-      if(order.quantity > 0)
-      {
-        std::cout << order << std::endl;
-          matching_engine.new_order(order);
-      }
-  }
-#endif
   return 0;
 }
