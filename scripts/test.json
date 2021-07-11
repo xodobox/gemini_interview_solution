@@ -1,0 +1,44 @@
+[
+    {   "input": [ "12345 BUY BTCUSD 5 10000" ],
+        "output": ["12345 BUY BTCUSD 5 10000 0"]
+    },
+    {   "input": [ "zod42 SELL BTCUSD 2 10001" ],
+        "output": ["zod42 SELL BTCUSD 2 10001 1", 
+                 "12345 BUY BTCUSD 5 10000 0"]
+    },
+    {
+        "input": [ "13471 BUY BTCUSD 6 9971" ],
+        "output": ["zod42 SELL BTCUSD 2 10001 1", 
+                 "12345 BUY BTCUSD 5 10000 0", 
+                 "13471 BUY BTCUSD 6 9971 2"]
+    },
+    {
+        "input": [ "11431 BUY ETHUSD 9 175" ],
+        "output": ["zod42 SELL BTCUSD 2 10001 1", 
+                "12345 BUY BTCUSD 5 10000 0", 
+                "13471 BUY BTCUSD 6 9971 2", 
+                "11431 BUY ETHUSD 9 175 3"]
+    },
+    {
+        "input": [ "abe14 SELL BTCUSD 7 9800" ],
+        "output": ["TRADE BTCUSD abe14 12345 5 10000", 
+                "TRADE BTCUSD abe14 13471 2 9971", 
+                "zod42 SELL BTCUSD 2 10001 1", 
+                "13471 BUY BTCUSD 4 9971 2", 
+                "11431 BUY ETHUSD 9 175 3"]
+    },
+    {
+        "input": [ "plu401 SELL ETHUSD 5 170" ],
+        "output": ["TRADE ETHUSD plu401 11431 5 175", 
+                "zod42 SELL BTCUSD 2 10001 1", 
+                "13471 BUY BTCUSD 4 9971 2", 
+                "11431 BUY ETHUSD 4 175 3"]
+    },
+    {
+        "input": [ "45691 BUY ETHUSD 3 180" ],
+        "output": ["zod42 SELL BTCUSD 2 10001 1", 
+                "13471 BUY BTCUSD 4 9971 2", 
+                "11431 BUY ETHUSD 4 175 3", 
+                "45691 BUY ETHUSD 3 180 6"]
+    }
+]
